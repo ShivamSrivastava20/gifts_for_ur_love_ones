@@ -1,0 +1,32 @@
+<header>
+  <div class="grid">
+    <div class="col-3">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="logo">
+      </div>
+    </div>
+    <div class="col-4 seacrh">
+      <bluebits-product-search></bluebits-product-search>
+    </div>
+    <div class="col-3 col-offset-1 navigation">
+      <bluebits-nav></bluebits-nav>
+    </div>
+    <div class="col-1 tools">
+      <!-- <i class="pi pi-user p-text-secondary" style="font-size: 1.3rem"></i> -->
+      <button class="pi pi-user p-text-secondary" style="font-size: 1.3rem" (click)="click_user()"></button>
+      Hi {{guest}}
+      <div *ngIf = "showSignUp" class="dropdown">
+      
+      <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenu2"> -->
+      
+        <button class="dropdown-item" type="button" (click)="signup_form()">SignUp/SignIn</button>
+        <button class="dropdown-item" type="button" (click)="myaccount_form()">My Account</button>
+        <button class="dropdown-item" type="button" (click)="myorders_form()">My Orders</button>
+        <button class="dropdown-item" type="button" (click)="signout()">Sign Out</button>
+
+      <!-- </div> -->
+    </div>
+    </div>
+    <bluebits-cart-icon></bluebits-cart-icon>
+  </div>
+</header>
